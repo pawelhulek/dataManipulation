@@ -4,7 +4,8 @@ import java.net.URI;
 import java.util.Map;
 
 /**
- * Created by FEREWER on 2017-01-03.
+ * @author: Paweł Hulek
+ * @created: 2017-01-03.
  */
 public class URIParser {
     private URIParser() {
