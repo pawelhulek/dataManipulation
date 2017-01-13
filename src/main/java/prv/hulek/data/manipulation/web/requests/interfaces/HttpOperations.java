@@ -12,5 +12,9 @@ public interface HttpOperations<REQUEST, RESPONSE> {
 
     Optional<RESPONSE> send();
 
-    CompletableFuture<Optional<RESPONSE>> sendAsync();
+    default CompletableFuture<Optional<RESPONSE>> sendAsync() {
+        return CompletableFuture.supplyAsync(this::send);
+    }
+
+
 }

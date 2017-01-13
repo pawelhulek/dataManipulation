@@ -1,7 +1,7 @@
-package prv.hulek.data.manipulation.web.requests.implementations;
+package prv.hulek.data.manipulation.web.requests.base;
 
 import prv.hulek.data.manipulation.web.requests.interfaces.HttpOperations;
-import prv.hulek.data.manipulation.web.utils.uri.UrlBuilder;
+import prv.hulek.data.manipulation.web.url.UrlBuilder;
 
 import java.util.Map;
 
