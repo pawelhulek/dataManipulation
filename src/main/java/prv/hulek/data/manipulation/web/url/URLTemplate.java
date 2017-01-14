@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @author: Paweł Hulek
  * @created: 2017-01-12.
  */
-public class URL extends LinkedList<PathSegment> {
+public class URLTemplate extends LinkedList<PathSegment> {
 
     public String toUrl(Map<String, String> parameters) {
         AtomicBoolean isFirstQueryParameter = new AtomicBoolean(true);

@@ -6,7 +6,7 @@ import prv.hulek.data.manipulation.web.url.exceptions.MissingValueException;
  * @author: Paweł Hulek
  * @created: 2017-01-12.
  */
-class QueryParam extends Parameter {
+public class QueryParam extends Parameter {
 
     private static final String QUERY_START_STRING = "${";
     private static final String QUERY_END_STRING = "}";
