@@ -1,5 +1,6 @@
 package prv.hulek.data.manipulation.web.url;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -10,6 +11,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class URLTemplate extends LinkedList<PathSegment> {
 
+    public String toUrl() {
+        return this.toUrl(Collections.emptyMap());
+    }
     public String toUrl(Map<String, String> parameters) {
         AtomicBoolean isFirstQueryParameter = new AtomicBoolean(true);
         return this.stream()
