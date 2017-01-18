@@ -21,7 +21,7 @@ class UrlTemplateBuilderTest {
         Templateable builder = UrlTemplateBuilder.of()
                 .host("www.website.com", 8080);
         assertThat(builder.build().toUrl(correctParams().build()))
-                .isEqualToIgnoringCase("www.website.com:8080/");
+                .isEqualToIgnoringCase("http://www.website.com:8080/");
     }
 
     @Test
@@ -29,7 +29,7 @@ class UrlTemplateBuilderTest {
         Templateable builder = UrlTemplateBuilder.of()
                 .host("www.website.com", 80).context("games");
         assertThat(builder.build().toUrl())
-                .isEqualToIgnoringCase("www.website.com:80/games/");
+                .isEqualToIgnoringCase("http://www.website.com:80/games/");
     }
 
     @Test
@@ -37,7 +37,7 @@ class UrlTemplateBuilderTest {
         Templateable builder = UrlTemplateBuilder.of()
                 .host("www.website.com").context("games");
         assertThat(builder.build().toUrl())
-                .isEqualToIgnoringCase("www.website.com/games/");
+                .isEqualToIgnoringCase("http://www.website.com/games/");
     }
 
     @Test
@@ -46,7 +46,7 @@ class UrlTemplateBuilderTest {
                 .host("www.website.com").context("games").queryParam("user");
         ImmutableMap.Builder<String, String> params = paramsBuilder().put("user", "me");
         assertThat(builder.build().toUrl(params.build()))
-                .isEqualToIgnoringCase("www.website.com/games/me/");
+                .isEqualToIgnoringCase("http://www.website.com/games/me/");
     }
 
     @Test
@@ -55,7 +55,7 @@ class UrlTemplateBuilderTest {
                 .host("www.website.com").context("games").queryParam("user").queryParam("gameType");
         ImmutableMap.Builder<String, String> params = paramsBuilder().put("user", "mine").put("gameType", "FPP");
         assertThat(builder.build().toUrl(params.build()))
-                .isEqualToIgnoringCase("www.website.com/games/mine/FPP/");
+                .isEqualToIgnoringCase("http://www.website.com/games/mine/FPP/");
     }
 
     @Test
@@ -64,7 +64,7 @@ class UrlTemplateBuilderTest {
                 .host("www.website.com").context("games").queryParam("user").queryParam("gameType");
         ImmutableMap.Builder<String, String> params = paramsBuilder().put("user", "mine").put("gameType", "FPP").put("year", "2000");
         assertThat(builder.build().toUrl(params.build()))
-                .isEqualToIgnoringCase("www.website.com/games/mine/FPP/");
+                .isEqualToIgnoringCase("http://www.website.com/games/mine/FPP/");
     }
 
     @Test
@@ -75,7 +75,7 @@ class UrlTemplateBuilderTest {
         ImmutableMap.Builder<String, String> params = paramsBuilder().put("user", "mine")
                 .put("gameType", "FPP").put("year", "2000").put("device", "android");
         assertThat(builder.build().toUrl(params.build()))
-                .isEqualToIgnoringCase("www.website.com/games/mine/FPP/?year=2000&device=android");
+                .isEqualToIgnoringCase("http://www.website.com/games/mine/FPP/?year=2000&device=android");
     }
 
     @Test
@@ -83,7 +83,7 @@ class UrlTemplateBuilderTest {
         Templateable builder = UrlTemplateBuilder.of()
                 .host("www.website.com").pathSegment("games");
         assertThat(builder.build().toUrl(correctParams().build()))
-                .isEqualToIgnoringCase("www.website.com/games/");
+                .isEqualToIgnoringCase("http://www.website.com/games/");
     }
 
     @Test
@@ -95,7 +95,7 @@ class UrlTemplateBuilderTest {
                 .queryParam("gameName")
                 .requestParam("version");
         assertThat(builder.build().toUrl(correctParams().build()))
-                .isEqualToIgnoringCase("www.website.com/games/ubisoft/Watch%20dogs/?version=1");
+                .isEqualToIgnoringCase("http://www.website.com/games/ubisoft/Watch%20dogs/?version=1");
     }
 
     private ImmutableMap.Builder<String, String> correctParams() {

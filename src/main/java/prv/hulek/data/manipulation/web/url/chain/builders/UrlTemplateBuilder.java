@@ -16,8 +16,8 @@ public class UrlTemplateBuilder implements Templateable {
         this.urlTemplate = urlTemplate;
     }
 
-    public static HostChainTemplateBuilder of() {
-        return new HostChainTemplateBuilder(new URLTemplate());
+    public static SchemeHostChainTemplateBuilder of() {
+        return new SchemeHostChainTemplateBuilder(new URLTemplate());
     }
 
     UrlTemplateBuilder add(PathSegment segment) {

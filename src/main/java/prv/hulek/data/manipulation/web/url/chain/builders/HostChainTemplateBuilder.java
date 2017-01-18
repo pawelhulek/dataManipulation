@@ -14,7 +14,8 @@ public class HostChainTemplateBuilder extends UrlTemplateBuilder {
     }
 
     public ContextChainTemplateBuilder host(String host) {
-        return this.host(host, null);
+        urlTemplate.add(new Host(host, (Integer) null));
+        return new ContextChainTemplateBuilder(urlTemplate);
     }
 
     public ContextChainTemplateBuilder host(String host, Integer port) {
