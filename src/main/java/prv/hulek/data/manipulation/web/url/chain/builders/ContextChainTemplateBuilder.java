@@ -8,7 +8,7 @@ import prv.hulek.data.manipulation.web.url.URLTemplate;
  */
 public class ContextChainTemplateBuilder extends SegmentChainTemplateBuilder {
 
-    public ContextChainTemplateBuilder(URLTemplate urlTemplate) {
+    ContextChainTemplateBuilder(URLTemplate urlTemplate) {
         super(urlTemplate);
     }
 

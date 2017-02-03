@@ -8,7 +8,7 @@ import prv.hulek.data.manipulation.web.url.URLTemplate;
  * @created: 2017-01-14.
  */
 public class RequestParameterChainTemplateBuilder extends UrlTemplateBuilder {
-    public RequestParameterChainTemplateBuilder(URLTemplate urlTemplate) {
+    RequestParameterChainTemplateBuilder(URLTemplate urlTemplate) {
         super(urlTemplate);
     }
 

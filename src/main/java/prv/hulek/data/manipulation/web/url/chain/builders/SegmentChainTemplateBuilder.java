@@ -11,7 +11,7 @@ import prv.hulek.data.manipulation.web.url.URLTemplate;
  */
 public class SegmentChainTemplateBuilder extends UrlTemplateBuilder {
 
-    public SegmentChainTemplateBuilder(URLTemplate urlTemplate) {
+    SegmentChainTemplateBuilder(URLTemplate urlTemplate) {
         super(urlTemplate);
     }
 

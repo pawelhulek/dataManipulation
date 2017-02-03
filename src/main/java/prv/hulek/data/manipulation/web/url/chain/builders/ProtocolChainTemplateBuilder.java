@@ -1,24 +1,24 @@
 package prv.hulek.data.manipulation.web.url.chain.builders;
 
-import prv.hulek.data.manipulation.web.url.Scheme;
+import prv.hulek.data.manipulation.web.url.Protocol;
 import prv.hulek.data.manipulation.web.url.URLTemplate;
 
 /**
  * @author: Paweł Hulek
  * @created: 2017-01-18.
  */
-public class SchemeHostChainTemplateBuilder extends HostChainTemplateBuilder {
-    public SchemeHostChainTemplateBuilder(URLTemplate urlTemplate) {
+public class ProtocolChainTemplateBuilder extends HostChainTemplateBuilder {
+    ProtocolChainTemplateBuilder(URLTemplate urlTemplate) {
         super(urlTemplate);
     }
 
     public HostChainTemplateBuilder http() {
-        urlTemplate.add(Scheme.HTTP);
+        urlTemplate.add(Protocol.HTTP);
         return this;
     }
 
     public HostChainTemplateBuilder https() {
-        urlTemplate.add(Scheme.HTTPS);
+        urlTemplate.add(Protocol.HTTPS);
         return this;
     }
 

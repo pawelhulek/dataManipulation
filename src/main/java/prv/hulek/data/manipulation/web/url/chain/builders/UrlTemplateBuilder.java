@@ -12,12 +12,12 @@ import prv.hulek.data.manipulation.web.url.URLTemplate;
 public class UrlTemplateBuilder implements Templateable {
     protected final URLTemplate urlTemplate;
 
-    public UrlTemplateBuilder(URLTemplate urlTemplate) {
+    UrlTemplateBuilder(URLTemplate urlTemplate) {
         this.urlTemplate = urlTemplate;
     }
 
-    public static SchemeHostChainTemplateBuilder of() {
-        return new SchemeHostChainTemplateBuilder(new URLTemplate());
+    public static ProtocolChainTemplateBuilder of() {
+        return new ProtocolChainTemplateBuilder(new URLTemplate());
     }
 
     UrlTemplateBuilder add(PathSegment segment) {

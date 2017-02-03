@@ -9,7 +9,7 @@ import prv.hulek.data.manipulation.web.url.URLTemplate;
  */
 public class HostChainTemplateBuilder extends UrlTemplateBuilder {
 
-    public HostChainTemplateBuilder(URLTemplate urlTemplate) {
+    HostChainTemplateBuilder(URLTemplate urlTemplate) {
         super(urlTemplate);
     }
 
